@@ -10,48 +10,29 @@ import Spring
 class AnimateGeneretorViewController: UIViewController {
     
     @IBOutlet weak var presentLabel: UILabel!
-    @IBOutlet weak var curveLabel: UILabel!
-    @IBOutlet weak var forceLabel: UILabel!
-    @IBOutlet weak var durationLabel: UILabel!
-    @IBOutlet weak var delayLabel: UILabel!
-    
+
     @IBOutlet weak var runButton: UIButton!
     @IBOutlet weak var springAnimationView: SpringView!
     
-    let animationList = Animation.getAnimation()
-    var currentRandomAnimation: Animation! {
-        didSet {
-            presentLabel.text = "present: \(currentRandomAnimation.present)"
-            curveLabel.text = "curve: \(currentRandomAnimation.curve)"
-            forceLabel.text = "force: \(currentRandomAnimation.force)"
-            durationLabel.text = "duration: \(currentRandomAnimation.duration)"
-            delayLabel.text = "delay: \(currentRandomAnimation.delay)"
-        }
-    }
+    var animation = Animation.getAnimation()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentRandomAnimation = getRandomAnimation()
-        
-        
+        presentLabel.text = animation.description
     }
 
     @IBAction func runButtonPressed() {
+        presentLabel.text = animation.description
         
-        springAnimationView.animation = currentRandomAnimation.present
-        springAnimationView.delay = CGFloat(currentRandomAnimation.delay)
-        springAnimationView.force = CGFloat(currentRandomAnimation.force)
-        springAnimationView.curve = currentRandomAnimation.curve
-        springAnimationView.duration = CGFloat(currentRandomAnimation.duration)
+        springAnimationView.animation = animation.present
+        springAnimationView.delay = CGFloat(animation.delay)
+        springAnimationView.force = CGFloat(animation.force)
+        springAnimationView.curve = animation.curve
+        springAnimationView.duration = CGFloat(animation.duration)
         springAnimationView.animate()
-        
-        //sleep(2)
-        currentRandomAnimation =  getRandomAnimation()
-        runButton.setTitle(currentRandomAnimation.present, for: .normal)
-    }
     
-    private func getRandomAnimation() -> Animation {
-        return animationList.randomElement()!
+        animation =  Animation.getAnimation()
+        runButton.setTitle(animation.present, for: .normal)
     }
     
 }

@@ -14,8 +14,17 @@ struct Animation {
     let duration: Float
     let delay: Float
     
-    static func getAnimation() -> [Animation] {
-        var animations = [Animation]()
+    var description: String {
+        """
+        present: \(present)
+        curve: \(curve)
+        force: \(force)
+        duration: \(duration)
+        delay: \(delay)
+        """
+    }
+    
+    static func getAnimation() -> Animation {
         let mockData = DataManager.shared
         
         let presents = mockData.presents.shuffled()
@@ -24,10 +33,6 @@ struct Animation {
         let durations = mockData.duration.shuffled()
         let delays = mockData.delay.shuffled()
         
-        for n in 0...presents.count - 1 {
-            animations.append(Animation(present: presents[n], curve: curves[n], force: forces[n], duration: durations[n], delay: delays[n]))
-        }
-        
-        return animations
+        return Animation(present: presents.randomElement()!, curve: curves.randomElement()!, force: forces.randomElement()!, duration: durations.randomElement()!, delay: delays.randomElement()!)
     }
 }

@@ -19,50 +19,21 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="30H-eL-ddw" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="100" y="64" width="214" height="200"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="NZm-bZ-1aI">
-                                        <rect key="frame" x="8" y="8" width="198" height="184"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuN-oX-zQK">
-                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="32"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqn-tI-DCX">
-                                                <rect key="frame" x="0.0" y="36" width="41.5" height="31.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gju-qF-6V9">
-                                                <rect key="frame" x="0.0" y="71.5" width="41.5" height="32"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLQ-gf-o4f">
-                                                <rect key="frame" x="0.0" y="107.5" width="41.5" height="32"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipU-cA-gSn">
-                                                <rect key="frame" x="0.0" y="143.5" width="41.5" height="40.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuN-oX-zQK">
+                                        <rect key="frame" x="5" y="5" width="204" height="190"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="tintColor"/>
                                 <color key="tintColor" systemColor="tintColor"/>
                                 <constraints>
-                                    <constraint firstItem="NZm-bZ-1aI" firstAttribute="top" secondItem="30H-eL-ddw" secondAttribute="top" constant="8" id="Qkq-0N-54h"/>
+                                    <constraint firstAttribute="bottom" secondItem="vuN-oX-zQK" secondAttribute="bottom" constant="5" id="2Xk-nD-Mi6"/>
+                                    <constraint firstAttribute="trailing" secondItem="vuN-oX-zQK" secondAttribute="trailing" constant="5" id="FzK-5T-Xhu"/>
+                                    <constraint firstItem="vuN-oX-zQK" firstAttribute="leading" secondItem="30H-eL-ddw" secondAttribute="leading" constant="5" id="HeD-vj-oT6"/>
+                                    <constraint firstItem="vuN-oX-zQK" firstAttribute="top" secondItem="30H-eL-ddw" secondAttribute="top" constant="5" id="SdZ-Pg-N9K"/>
                                     <constraint firstAttribute="height" constant="200" id="Vst-0R-1RG"/>
-                                    <constraint firstItem="NZm-bZ-1aI" firstAttribute="leading" secondItem="30H-eL-ddw" secondAttribute="leading" constant="8" id="cFo-7b-yad"/>
-                                    <constraint firstAttribute="bottom" secondItem="NZm-bZ-1aI" secondAttribute="bottom" constant="8" id="kbe-dE-wuw"/>
-                                    <constraint firstAttribute="trailing" secondItem="NZm-bZ-1aI" secondAttribute="trailing" constant="8" id="yLy-ss-hgL"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -95,10 +66,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="curveLabel" destination="Cqn-tI-DCX" id="3A2-dB-omh"/>
-                        <outlet property="delayLabel" destination="ipU-cA-gSn" id="PDx-iq-ePI"/>
-                        <outlet property="durationLabel" destination="iLQ-gf-o4f" id="4KW-4e-ehX"/>
-                        <outlet property="forceLabel" destination="gju-qF-6V9" id="oVz-uU-ujK"/>
                         <outlet property="presentLabel" destination="vuN-oX-zQK" id="qTm-H7-pVZ"/>
                         <outlet property="runButton" destination="bO7-Dc-dKY" id="Vsc-55-lOp"/>
                         <outlet property="springAnimationView" destination="30H-eL-ddw" id="g3e-8R-jdl"/>
