@@ -27,12 +27,6 @@ struct Animation {
     static func getAnimation() -> Animation {
         let mockData = DataManager.shared
         
-        let presents = mockData.presents.shuffled()
-        let curves = mockData.curve.shuffled()
-        let forces = mockData.force.shuffled()
-        let durations = mockData.duration.shuffled()
-        let delays = mockData.delay.shuffled()
-        
-        return Animation(present: presents.randomElement()!, curve: curves.randomElement()!, force: forces.randomElement()!, duration: durations.randomElement()!, delay: delays.randomElement()!)
+        return Animation(present: mockData.presents.randomElement()!.rawValue, curve: mockData.curves.randomElement()!.rawValue, force: Float.random(in: 1...2), duration: Float.random(in: 1...2), delay: 0.3)
     }
 }

@@ -14,7 +14,7 @@ class AnimateGeneretorViewController: UIViewController {
     @IBOutlet weak var runButton: UIButton!
     @IBOutlet weak var springAnimationView: SpringView!
     
-    var animation = Animation.getAnimation()
+    private var animation = Animation.getAnimation()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class AnimateGeneretorViewController: UIViewController {
         springAnimationView.animate()
     
         animation =  Animation.getAnimation()
-        runButton.setTitle(animation.present, for: .normal)
+        runButton.setTitle("Run \(animation.present)", for: .normal)
     }
     
 }
